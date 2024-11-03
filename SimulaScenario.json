@@ -1,0 +1,16 @@
+{
+  "Simula": {
+    "meta-info": {
+      "version": "0.0.1"
+    },
+    "SimulaTree": {
+      "Station": {
+        "timestep (s)" : 0.5, 
+        "Subcomponents": {
+          "Simulation": {},
+          "IOHandler": {}
+        }
+      }
+    }
+  }
+}
