@@ -3,6 +3,7 @@
 #include "nlohmann/json.hpp"
 #include <iostream>
 #include <fstream>
+#include <filesystem>
 
 //--------------------------------------------------
 // Constructor
@@ -10,8 +11,10 @@
 SimulaApplication::SimulaApplication(const std::string& inputFile)
     : inputFile(inputFile)
 {
+    std::filesystem::path filepath = std::filesystem::current_path() / inputFile;
+
     try {
-        std::ifstream f("SimulaScenario.json");
+        std::ifstream f(filepath);
         auto scenario = nlohmann::json::parse(f);
         auto metaInfo = scenario["Simula"]["meta-info"];
         auto simulaTree = scenario["Simula"]["SimulaTree"];
@@ -25,7 +28,7 @@ SimulaApplication::SimulaApplication(const std::string& inputFile)
 
     }
     catch (std::exception e) {
-        throw std::runtime_error("Failed to parse scenario file");
+        throw std::runtime_error("Failed to parse scenario file: " + inputFile);
     }
 }
 

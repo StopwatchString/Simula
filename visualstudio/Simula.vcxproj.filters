@@ -37,6 +37,9 @@
     <Filter Include="Source Files\simula\meta">
       <UniqueIdentifier>{0603a88d-2aee-4615-a4fc-3118d92b13dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\thirdparty\argh">
+      <UniqueIdentifier>{4a13b99d-36b0-45ff-b1b8-59e492038542}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\main.cpp">
@@ -85,6 +88,12 @@
     </ClInclude>
     <ClInclude Include="..\simula\core\Station.h">
       <Filter>Header Files\simula\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simula\meta\ClassData.h">
+      <Filter>Header Files\simula\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="..\thirdparty\argh\argh.h">
+      <Filter>Header Files\thirdparty\argh</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -144,9 +144,11 @@
     <ClInclude Include="..\simula\core\Object.h" />
     <ClInclude Include="..\simula\core\Station.h" />
     <ClInclude Include="..\simula\core\System.h" />
+    <ClInclude Include="..\simula\meta\ClassData.h" />
     <ClInclude Include="..\simula\meta\ClassRegistry.h" />
     <ClInclude Include="..\simula\meta\SimulaApplication.h" />
     <ClInclude Include="..\simula\meta\SimulaTree.h" />
+    <ClInclude Include="..\thirdparty\argh\argh.h" />
     <ClInclude Include="..\thirdparty\nlohmann\json.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
