@@ -1,15 +1,13 @@
 #ifndef SIMULA_COMPONENT_REGISTRY_H
 #define SIMULA_COMPONENT_REGISTRY_H
 
+#include "meta/ClassData.h"
+
+#include "core/Component.h"
+#include "core/Station.h"
+
 #include <array>
 #include <string_view>
-
-//--------------------------------------------------
-// ClassData
-//--------------------------------------------------
-struct ClassData {
-    std::string_view name;
-};
 
 //--------------------------------------------------
 // ClassRegistry
@@ -63,15 +61,9 @@ constexpr auto makeRegistry() {
     };
 }
 
-struct MyClassA {
-public:
-    static constexpr ClassData classData() { return { "MyClassA" }; }
-};
-
-struct MyClassB {
-    static constexpr ClassData classData() { return { "MyClassB" }; }
-};
-
-constexpr auto classRegistry = makeRegistry<MyClassA, MyClassB>();
+constexpr auto classRegistry = makeRegistry<
+    simula::core::Component,
+    simula::core::Station
+>();
 
 #endif

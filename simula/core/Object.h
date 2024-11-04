@@ -17,7 +17,6 @@ public:
     virtual Object& operator=(const Object& other);
     virtual Object& operator=(Object&& other) noexcept;
 
-    virtual std::string getObjectName() = 0;
 private:
 
 };

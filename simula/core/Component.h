@@ -1,6 +1,8 @@
 #ifndef SIMULA_CORE_COMPONENT_H
 #define SIMULA_CORE_COMPONENT_H
 
+#include "meta/ClassData.h"
+
 #include "core/Object.h"
 
 namespace simula {
@@ -17,7 +19,10 @@ public:
     virtual Component& operator=(const Component& other);
     virtual Component& operator=(Component&& other) noexcept;
 
-    virtual std::string getObjectName() = 0;
+public:
+    static constexpr ClassData classData() {
+        return { "Component" };
+    }
 };
 } // end core
 } // end simula
