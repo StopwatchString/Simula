@@ -1,7 +1,7 @@
 #ifndef SIMULA_CORE_STATION_H
 #define SIMULA_CORE_STATION_H
 
-#include "core/ClassRegistry.h"
+#include "meta/ClassRegistry.h"
 #include "core/Component.h"
 
 namespace simula {

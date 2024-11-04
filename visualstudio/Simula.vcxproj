@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{33f70768-547b-45a4-b8f3-2cea1003c704}</ProjectGuid>
+    <ProjectGuid>{3ed1864e-8e6f-471e-9d9d-2dc8cd21cb91}</ProjectGuid>
     <RootNamespace>Simula</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -104,8 +104,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Simula;$(SolutionDir)..\thirdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,8 +120,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Simula;$(SolutionDir)..\thirdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,21 +131,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="core\Component.cpp" />
-    <ClCompile Include="core\Object.cpp" />
-    <ClCompile Include="core\SimulaApplication.cpp" />
-    <ClCompile Include="core\SimulaTree.cpp" />
-    <ClCompile Include="core\Station.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\simula\core\Component.cpp" />
+    <ClCompile Include="..\simula\core\Object.cpp" />
+    <ClCompile Include="..\simula\core\Station.cpp" />
+    <ClCompile Include="..\simula\core\System.cpp" />
+    <ClCompile Include="..\simula\meta\SimulaApplication.cpp" />
+    <ClCompile Include="..\simula\meta\SimulaTree.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="core\Component.h" />
-    <ClInclude Include="core\ClassRegistry.h" />
-    <ClInclude Include="core\Object.h" />
-    <ClInclude Include="core\SimulaApplication.h" />
-    <ClInclude Include="core\SimulaTree.h" />
-    <ClInclude Include="core\Station.h" />
-    <ClInclude Include="thirdparty\nlohmann\json.hpp" />
+    <ClInclude Include="..\simula\core\Component.h" />
+    <ClInclude Include="..\simula\core\Object.h" />
+    <ClInclude Include="..\simula\core\Station.h" />
+    <ClInclude Include="..\simula\core\System.h" />
+    <ClInclude Include="..\simula\meta\ClassRegistry.h" />
+    <ClInclude Include="..\simula\meta\SimulaApplication.h" />
+    <ClInclude Include="..\simula\meta\SimulaTree.h" />
+    <ClInclude Include="..\thirdparty\nlohmann\json.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

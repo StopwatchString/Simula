@@ -1,6 +1,6 @@
-#include "core/SimulaApplication.h"
+#include "meta/SimulaApplication.h"
 
-#include "thirdparty/nlohmann/json.hpp"
+#include "nlohmann/json.hpp"
 #include <iostream>
 #include <fstream>
 

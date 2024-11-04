@@ -1,5 +1,5 @@
-#include "core/SimulaApplication.h"
-#include "core/ClassRegistry.h"
+#include "meta/SimulaApplication.h"
+#include "meta/ClassRegistry.h"
 
 #include <iostream>
 
@@ -7,8 +7,6 @@ const std::string SCENARIO_FILE = "SimulaScenario.json";
 
 int main()
 {
-    
-
     if (classRegistry.contains("MyClassA")) {
         std::cout << "contains" << std::endl;
     }

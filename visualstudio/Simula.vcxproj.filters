@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\thirdparty">
+      <UniqueIdentifier>{f81217cf-caef-4d34-9a31-ea3f5829853e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\thirdparty\nlohmann">
+      <UniqueIdentifier>{47203d65-fbfd-4e43-aa44-1cf6bdfe420f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\simula">
+      <UniqueIdentifier>{dd4ac3b6-a534-436d-9324-bce11ac69781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\simula\core">
+      <UniqueIdentifier>{a2010b42-7747-4b0b-b47e-018a4df67c5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\simula\meta">
+      <UniqueIdentifier>{8b4b7f2d-9557-487b-bc1c-ce90fb2fe87c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\simula">
+      <UniqueIdentifier>{d5a5f80f-24bc-41d0-9127-16b77b66ce12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\simula\core">
+      <UniqueIdentifier>{51f5c081-7c09-4a18-b95d-a4d013c80ee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\simula\meta">
+      <UniqueIdentifier>{0603a88d-2aee-4615-a4fc-3118d92b13dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simula\meta\SimulaApplication.cpp">
+      <Filter>Source Files\simula\meta</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simula\meta\SimulaTree.cpp">
+      <Filter>Source Files\simula\meta</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simula\core\Component.cpp">
+      <Filter>Source Files\simula\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simula\core\Object.cpp">
+      <Filter>Source Files\simula\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simula\core\Station.cpp">
+      <Filter>Source Files\simula\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simula\core\System.cpp">
+      <Filter>Source Files\simula\core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\thirdparty\nlohmann\json.hpp">
+      <Filter>Header Files\thirdparty\nlohmann</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simula\meta\ClassRegistry.h">
+      <Filter>Header Files\simula\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simula\meta\SimulaApplication.h">
+      <Filter>Header Files\simula\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simula\meta\SimulaTree.h">
+      <Filter>Header Files\simula\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simula\core\System.h">
+      <Filter>Header Files\simula\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simula\core\Component.h">
+      <Filter>Header Files\simula\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simula\core\Object.h">
+      <Filter>Header Files\simula\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simula\core\Station.h">
+      <Filter>Header Files\simula\core</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
