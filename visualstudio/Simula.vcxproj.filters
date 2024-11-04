@@ -48,9 +48,6 @@
     <ClCompile Include="..\simula\meta\SimulaApplication.cpp">
       <Filter>Source Files\simula\meta</Filter>
     </ClCompile>
-    <ClCompile Include="..\simula\meta\SimulaTree.cpp">
-      <Filter>Source Files\simula\meta</Filter>
-    </ClCompile>
     <ClCompile Include="..\simula\core\Component.cpp">
       <Filter>Source Files\simula\core</Filter>
     </ClCompile>
@@ -72,9 +69,6 @@
       <Filter>Header Files\simula\meta</Filter>
     </ClInclude>
     <ClInclude Include="..\simula\meta\SimulaApplication.h">
-      <Filter>Header Files\simula\meta</Filter>
-    </ClInclude>
-    <ClInclude Include="..\simula\meta\SimulaTree.h">
       <Filter>Header Files\simula\meta</Filter>
     </ClInclude>
     <ClInclude Include="..\simula\core\System.h">

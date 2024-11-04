@@ -137,7 +137,6 @@
     <ClCompile Include="..\simula\core\Station.cpp" />
     <ClCompile Include="..\simula\core\System.cpp" />
     <ClCompile Include="..\simula\meta\SimulaApplication.cpp" />
-    <ClCompile Include="..\simula\meta\SimulaTree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\simula\core\Component.h" />
@@ -147,7 +146,6 @@
     <ClInclude Include="..\simula\meta\ClassData.h" />
     <ClInclude Include="..\simula\meta\ClassRegistry.h" />
     <ClInclude Include="..\simula\meta\SimulaApplication.h" />
-    <ClInclude Include="..\simula\meta\SimulaTree.h" />
     <ClInclude Include="..\thirdparty\argh\argh.h" />
     <ClInclude Include="..\thirdparty\nlohmann\json.hpp" />
   </ItemGroup>

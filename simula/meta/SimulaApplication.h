@@ -1,5 +1,7 @@
-#ifndef SIMULA_CORE_SIMULA_APPLICATION_H
-#define SIMULA_CORE_SIMULA_APPLICATION_H
+#ifndef SIMULA_META_SIMULA_APPLICATION_H
+#define SIMULA_META_SIMULA_APPLICATION_H
+
+#include "core/Component.h"
 
 #include <string>
 
@@ -27,6 +29,7 @@ public:
 private:
     std::string inputFile;
 
+    simula::core::Component componentTree;
 };
 
 #endif

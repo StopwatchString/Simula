@@ -20,7 +20,6 @@ int main(int argc, char* argv[])
         configFile = DEFAULT_SCENARIO_FILE;
     }
 
-
     try {
         SimulaApplication app(configFile);
     }

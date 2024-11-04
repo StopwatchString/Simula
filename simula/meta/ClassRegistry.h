@@ -29,14 +29,6 @@ public:
         return it != registeredClasses.end();
     }
 
-    constexpr bool build(std::string_view className) const {
-        auto it = std::find_if(registeredClasses.begin(), registeredClasses.end(), [&](const ClassData& classData) {
-            return classData.name == className;
-            });
-
-        return it != registeredClasses.end();
-    }
-
 private:
     std::array<ClassData, N> registeredClasses;
 };
