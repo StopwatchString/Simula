@@ -3,33 +3,15 @@
 #include "nlohmann/json.hpp"
 #include <iostream>
 #include <fstream>
-#include <filesystem>
+
 
 //--------------------------------------------------
 // Constructor
 //--------------------------------------------------
 SimulaApplication::SimulaApplication(const std::string& inputFile)
-    : inputFile(inputFile)
 {
-    std::filesystem::path filepath = std::filesystem::current_path() / inputFile;
-
-    try {
-        std::ifstream f(filepath);
-        auto scenario = nlohmann::json::parse(f);
-        auto metaInfo = scenario["Simula"]["meta-info"];
-        auto simulaTree = scenario["Simula"]["SimulaTree"];
-
-        std::string versionInfo = metaInfo["version"];
-
-        std::cout << versionInfo << std::endl;
-
-        double timestep = simulaTree["Station"]["timestep (s)"];
-        std::cout << "Timestep (s): " << timestep << std::endl;
-
-    }
-    catch (std::exception e) {
-        throw std::runtime_error("Failed to parse scenario file: " + inputFile);
-    }
+    std::filesystem::path file = std::filesystem::current_path() / inputFile;
+    parseScenario(file);
 }
 
 //--------------------------------------------------
@@ -38,4 +20,36 @@ SimulaApplication::SimulaApplication(const std::string& inputFile)
 SimulaApplication::~SimulaApplication()
 {
 
+}
+
+//--------------------------------------------------
+// parseScenario()
+//--------------------------------------------------
+void SimulaApplication::parseScenario(const std::filesystem::path& file)
+{
+    nlohmann::json scenario;
+    try {
+        std::ifstream f(file);
+        scenario = nlohmann::json::parse(f);
+    }
+    catch (nlohmann::json::parse_error& e) {
+        throw std::runtime_error("ERROR SimulaApplication::parseScenario() Failed to parse scenario file: " + file.string());
+    }
+
+    // Get meta information
+    try {
+        auto metaInfo = scenario["Simula"]["meta-info"];
+        m_MetaInfo.version = metaInfo["version"];
+    }
+    catch (std::exception& e) {
+        throw std::runtime_error("ERROR SimulaApplication::parseScenario() Failed to parse meta-info fields from " + file.string());
+    }
+    
+    // Build component tree
+    try {
+        auto simulaTree = scenario["Simula"]["Tree"];
+    }
+    catch (std::exception& e) {
+        throw std::runtime_error("ERROR SimulaApplication::parseScenario() Failed to parse component tree from " + file.string());
+    }
 }

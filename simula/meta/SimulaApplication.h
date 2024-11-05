@@ -4,6 +4,7 @@
 #include "core/Component.h"
 
 #include <string>
+#include <filesystem>
 
 //-----------------------------------------------------------------------------
 // class SimulaApplication
@@ -16,6 +17,10 @@
 // 
 //-----------------------------------------------------------------------------
 class SimulaApplication {
+    struct MetaInfo {
+        std::string version;
+    };
+
 public:
     SimulaApplication(const std::string& inputFile);
     ~SimulaApplication();
@@ -27,9 +32,10 @@ public:
     SimulaApplication& operator=(SimulaApplication&& other) noexcept = delete;
 
 private:
-    std::string inputFile;
+    void parseScenario(const std::filesystem::path& file);
 
-    simula::core::Component componentTree;
+    MetaInfo                m_MetaInfo;
+    simula::core::Component m_ComponentTree;
 };
 
 #endif

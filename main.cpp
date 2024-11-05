@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
         SimulaApplication app(configFile);
     }
     catch (std::exception& e) {
+        std::cerr << "ERROR main() SimulaApplication has thrown an unhandled exception. More information below:" << std::endl;
         std::cerr << e.what() << std::endl;
         return EXIT_FAILURE;
     }
